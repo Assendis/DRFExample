@@ -1,0 +1,18 @@
+venv/
+# gitignore
+**.pyc
+db.sqlite3
+*.sqlite3
+.idea
+.env
+dist
+.tox
+docs/docstring
+docs/_build
+docs/api
+env
+*.egg*
+storage.db
+exports
+*.log
+.idea/
