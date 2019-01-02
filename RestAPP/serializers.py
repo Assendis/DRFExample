@@ -4,11 +4,14 @@ from rest_framework import serializers
 class ProjectSerializer(serializers.ModelSerializer):
     class Meta:
         model=Project
-        fields = '__all__'
+        fields = ('project_name',
+                  'pub_date',
+                  'about_what',
+                  'comments')
 
 class CommentSerializer(serializers.ModelSerializer):
     class Meta:
         model=Comments
-        fields = '__all__'
-
-
+        fields = ('text',
+                  'comment',
+                  'username')

@@ -19,13 +19,11 @@ from django.contrib import admin
 from rest_framework import routers
 from RestAPP import views
 
-router = routers.DefaultRouter()
-router.register(r'project', views.ProjectViewSet)
-router.register(r'comments', views.CommentViewSet)
+
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     re_path('^api/', include('RestAPP.urls'), name='rest-framework'),
-    url(r'^', include(router.urls))
+
 ]
