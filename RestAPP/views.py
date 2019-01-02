@@ -31,7 +31,11 @@ class CommentViewSet(viewsets.ModelViewSet):
 #     def get_extra_actions(self):
 #         return []
 
-class MyCustomAPIView(mixins.CreateModelMixin, mixins.ListModelMixin, mixins.DestroyModelMixin, mixins.RetrieveModelMixin, viewsets.GenericViewSet):
+class MyCustomAPIView(mixins.CreateModelMixin,
+                      mixins.ListModelMixin,
+                      mixins.DestroyModelMixin,
+                      mixins.RetrieveModelMixin,
+                      viewsets.GenericViewSet):
     queryset = Project.objects.all()
     serializer_class = ProjectSerializer
 
